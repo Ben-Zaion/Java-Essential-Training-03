@@ -1,7 +1,10 @@
+import java.awt.Color;
+
 public class Tree {
     double heightFt;
     double trunkDiameterInches;
     TreeType treeType;
+    static Color TRUNK_COLOR = new Color(139, 69, 19);
 
     Tree(double heightFt, double trunkDiameterInches,
          TreeType treeType) {
@@ -13,6 +16,10 @@ public class Tree {
     void grow() {
         this.heightFt = this.heightFt + 10;
         this.trunkDiameterInches = this.trunkDiameterInches + 1;
+    }
+
+static void announceTree(){
+        System.out.println("Look at this "+Tree.TRUNK_COLOR+" tree!");
     }
 
     void announceTallTree() {
